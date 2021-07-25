@@ -3,15 +3,16 @@
 #include "GameNode.h"
 
 class Image;
+/// <summary>
+/// Timer : 게임 플레이 시, 카운트되는 타이머 클래스
+/// </summary>
 class Timer : public GameNode
 {
 private:
-	float posX;
-	float posY;
-	Image* CountDown_Num;
-
-	int currKeyFrameX;
-	int currKeyFrameY;
+	float posX;				// x축 좌표
+	float posY;				// y축 좌표
+	Image* CountDown_Num;	// 타이머 관련 숫자 이미지
+	
 	int currKeyFrameX2;
 	int currKeyFrameY2;
 	COLORREF transColor[3] = { RGB(63, 72, 204) ,RGB(64, 64, 192) ,RGB(167, 182, 93) };

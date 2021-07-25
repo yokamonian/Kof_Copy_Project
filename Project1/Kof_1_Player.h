@@ -4,12 +4,15 @@
 
 class Image;
 class Kof_2_Player;
+/// <summary>
+///	Kof_1_Player : 1p; 화면 기준 좌측 플레이어 클래스
+/// </summary>
 class Kof_1_Player : public GameNode
 {
 private:
 	float posX;
 	float posY;
-	float limitPosLeft[3]{ -90.0, -210.0, -110.0 };
+	float limitPosLeft[3]{ -90.0, -210.0, -110.0 }; // 스테이지 왼쪽 좌표 끝 기준 캐릭터의 좌측 이동 한계치
 
 	Image* img;
 
@@ -32,18 +35,19 @@ private:
 
 	int HP;
 
+	// 각종 bool 변수
 	float scale;
-	bool isAttack = false;
-	bool isMove = false;
-	bool isReverse = false;
-	bool isDamaged = false;
-	bool CheckReverse;
-	bool isDie = false;
-	bool isDieMotion = false;
-	bool isWin = false;
-	bool isWinMotion = false;
-	bool isStartMotion = false;
-	bool isAttached = false;
+	bool isAttack = false;		// 공격여부
+	bool isMove = false;		// 이동 여부
+	bool isReverse = false;		// 2p인지
+	bool isDamaged = false;		// 피격 여부
+	bool CheckReverse;			// 2p와 위치가 바뀌었는지 체크
+	bool isDie = false;			// 사망 여부
+	bool isDieMotion = false;	// 사망시 모션 여부
+	bool isWin = false;			// 승리 여부
+	bool isWinMotion = false;	// 승리시 모션 여부
+	bool isStartMotion = false;	// 시작시 모션 여부
+	bool isAttached = false;	// 서로 맞닿았는지 여부
 	Kof_2_Player* vsChar2;
 
 	float vsCharPosX;

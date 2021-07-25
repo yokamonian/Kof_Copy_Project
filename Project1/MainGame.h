@@ -11,7 +11,9 @@ class HealthBar;
 class ResultFont;
 class Title;
 class Camera;
-
+/// <summary>
+///	MainGame : 씬 매니저 클래스가 만들어지지 않은 프로젝트로써, 게임플레이의 모든 씬이 들어있는 클래스.
+/// </summary>
 
 class MainGame : public GameNode
 {

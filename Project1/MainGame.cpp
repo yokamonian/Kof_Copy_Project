@@ -15,7 +15,7 @@
 
 HRESULT MainGame::Init()
 {
-	// backBuffer
+	// backBuffer:; 1P, 2P간 위치값 변경에 따른 화면 이동을 위해 두개의 buffer 사용.
 	if (!isSelect)
 	{
 		backBuffer = new Image();
@@ -155,7 +155,7 @@ void MainGame::Release()
 
 void MainGame::Update()
 {
-	
+	// 캐릭터 선택 완료 시
 	if (isSelect)
 	{
 		if (player1)	player1->Update();
@@ -366,6 +366,7 @@ void MainGame::Update()
 		}
 		hp_bar->SetHp_1P(player1->GetHP());
 		hp_bar->SetHp_2P(player2->GetHP());
+		// 1P 승리 시
 		if (ResultNum == 1 || ResultNum == 4)
 		{
 			player1->SetIsWin(true);
@@ -377,6 +378,7 @@ void MainGame::Update()
 			isEnd = true;
 
 		}
+		// 2P 승리 시
 		else if(ResultNum == 2 || ResultNum == 5)
 		{
 			player2->SetIsWin(true);
@@ -388,6 +390,7 @@ void MainGame::Update()
 			isEnd = true;
 
 		}
+		// 드로우 판정 시
 		else if (ResultNum == 3 || ResultNum == 6)
 		{
 			player2->SetIsWin(true);

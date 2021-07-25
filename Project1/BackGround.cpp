@@ -8,6 +8,7 @@ HRESULT BackGround::Init()
 	posX = WINSTART_X;
 	posY = WINSTART_Y + 38;
 	srand(time(NULL));
+	// 배경 백그라운드 이미지 초기화(임의 재생)
 	BgNum = rand()%6;
 	img = new Image();
 	if (BgNum == 0)
@@ -57,6 +58,7 @@ void BackGround::Release()
 
 void BackGround::Update()
 {
+	// 백그라운드 프레임 재생 및 반복 설정
 	elapsedFrame++;
 	if (elapsedFrame % 7 == 6 && currKeyFrameX != 8)
 	{

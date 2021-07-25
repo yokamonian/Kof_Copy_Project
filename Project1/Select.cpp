@@ -10,9 +10,11 @@ HRESULT Select::Init()
 	posX = WINSTART_X;
 	posY = WINSTART_Y + 38;
 
+	// 초기 캐릭터 선택 초상화
 	ChoiceNum1P = 0;
 	ChoiceNum2P = 2;
 
+	// 포인터 좌표
 	posX1P = selectposX[ChoiceNum1P];
 	posY1P = selectposY[ChoiceNum1P];
 	posX2P = selectposX[ChoiceNum2P];
@@ -20,6 +22,7 @@ HRESULT Select::Init()
 
 	srand(time(NULL));
 	
+	// 이미지 관련 초기화
 	select = new Image();
 	select->Init("Image/Select.bmp",
 		posX, posY, 500, 400, 1, 1,true, RGB(255, 0, 255));
@@ -71,8 +74,10 @@ void Select::Release()
 
 void Select::Update()
 {
+	// 캐릭터 선택 이전
 	if (isSelect == false)
 	{
+		// 1P 기준, 이동 관련 키 세팅(좌우)
 		if (KeyManager::GetSingleton()->IsOnceKeyDown('G') && !(isChoice1P) || KeyManager::GetSingleton()->IsOnceKeyDown('H') && !(isChoice1P))
 		{
 			if (ChoiceNum1P <= 0)
@@ -86,9 +91,7 @@ void Select::Update()
 			posY1P = selectposY[ChoiceNum1P];
 		}
 
-
-
-
+		// 1P 기준, 이동 관련 키 세팅(상하)
 		if (KeyManager::GetSingleton()->IsOnceKeyDown('J') && !(isChoice1P) || KeyManager::GetSingleton()->IsOnceKeyDown('Y') && !(isChoice1P))
 		{
 			ChoiceNum1P = (ChoiceNum1P + 1) % 4;
@@ -98,6 +101,7 @@ void Select::Update()
 			posY1P = selectposY[ChoiceNum1P];
 		}
 
+		// 1P 기준, 선택 관련 키 세팅
 		if (KeyManager::GetSingleton()->IsOnceKeyDown('A') || KeyManager::GetSingleton()->IsOnceKeyDown('S'))
 		{
 			if (!isChoice1P)
@@ -112,6 +116,7 @@ void Select::Update()
 			}
 		}
 
+		// 2P 기준, 이동 관련 키 세팅(좌우)
 		if (KeyManager::GetSingleton()->IsOnceKeyDown(VK_NUMPAD4) && !(isChoice2P) || KeyManager::GetSingleton()->IsOnceKeyDown(VK_NUMPAD5) && !(isChoice2P))
 		{
 			if (ChoiceNum2P <= 0)
@@ -124,10 +129,7 @@ void Select::Update()
 			posX2P = selectposX[ChoiceNum2P];
 			posY2P = selectposY[ChoiceNum2P];
 		}
-
-
-
-
+		// 2P 기준, 이동 관련 키 세팅(상하)
 		if (KeyManager::GetSingleton()->IsOnceKeyDown(VK_NUMPAD6) && !(isChoice2P) || KeyManager::GetSingleton()->IsOnceKeyDown(VK_NUMPAD8) && !(isChoice2P))
 		{
 			ChoiceNum2P = (ChoiceNum2P + 1) % 4;
@@ -138,6 +140,7 @@ void Select::Update()
 			posY2P = selectposY[ChoiceNum2P];
 		}
 
+		// 2P 기준, 선택 관련 키 세팅
 		if (KeyManager::GetSingleton()->IsOnceKeyDown('O') || KeyManager::GetSingleton()->IsOnceKeyDown('P'))
 		{
 			if (!isChoice2P)

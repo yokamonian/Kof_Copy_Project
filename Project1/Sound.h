@@ -3,6 +3,9 @@
 #include "GameNode.h"
 //main문 내부에서든 어디서든 음악을 재생할 때 
 
+/// <summary>
+/// Sound : 사운드 관련 클래스.(미구현)
+/// </summary>
 class Sound : public GameNode
 {
 private:
@@ -30,23 +33,6 @@ public:
 	virtual void Release() override;
 	virtual void Update() override;
 	virtual void Render(HDC hdc) override;
-	//DWORD LoadWAV(HWND hWnd, LPCTSTR lpszWave)
-	//{
-	//	DWORD Result;
-	//	mciOpenParam.lpstrDeviceType = "WaveAudio";
-	//	//mciOpenParms.lpstrDeviceType
-	//  //WaveAudio 대신 MPEGVideo를 사용하면 mp3 형식을 재생합니다.
-	//	mciOpenParam.lpstrElementName = lpszWave;
-	//	//mciOpenParms.lpstrElementName 
-	//	Result = mciSendCommand(wDeviceID, MCI_OPEN, MCI_OPEN_TYPE | MCI_OPEN_ELEMENT, (DWORD)(LPVOID)& mciOpenParam);
-	//	if (Result)
-	//		return Result;
-	//	wDeviceID = mciOpenParam.wDeviceID;
-	//	mciPlay.dwCallback = (DWORD)hWnd;
-	//	if (Result)
-	//		return Result;
-	//	return 0;
-	//}
 
 
 

@@ -4,6 +4,10 @@
 
 class Image;
 class Kof_1_Player;
+/// <summary>
+///	Kof_2_Player : 2p; 화면 기준 우측 플레이어 클래스
+/// 기반 클래스 변수나 함수는 대부분 동일. Reverse관련된 부분만 반대값.
+/// </summary>
 class Kof_2_Player : public GameNode
 {
 private:

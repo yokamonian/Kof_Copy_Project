@@ -97,8 +97,7 @@ void Kof_1_Player::Release()
 
 void Kof_1_Player::Update()
 {
-
-
+	// 각종 판정 및 판정에 따른 프레임 상태 변경
 	if (!isStartMotion && !isDieMotion)
 	{
 		changeIndex(7);
@@ -165,6 +164,7 @@ void Kof_1_Player::Update()
 					isMove = false; // 이동 중 공격 했을 경우, 이동 프레임 출력 false 처리
 					changeIndex(0);
 
+					// 캐릭별 피격 박스
 					if (charNum == 0)
 					{
 						damagedBoxPosX = 115.0;
@@ -240,6 +240,7 @@ void Kof_1_Player::Update()
 			}
 		}
 
+		// 피격 설정
 		if (isDamaged)
 		{
 

@@ -2,6 +2,9 @@
 #include "GameNode.h"
 
 class Image;
+/// <summary>
+///	HealthBar : 게임플레이 시 체력게이지바 클래스.
+/// </summary>
 class HealthBar : public GameNode
 {
 private:
