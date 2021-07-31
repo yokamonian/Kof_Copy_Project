@@ -17,7 +17,6 @@ public:
 };
 
 // 싱글톤 초기화
-// static 변수 문법상 {} 영역 밖에서 초기화한다.
 template <typename T>
 T* SingletonBase<T>::instance = 0;
 

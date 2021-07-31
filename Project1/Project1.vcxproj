@@ -124,40 +124,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BackGround.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="GameNode.cpp" />
-    <ClCompile Include="HealthBar.cpp" />
-    <ClCompile Include="Image.cpp" />
-    <ClCompile Include="KeyManager.cpp" />
-    <ClCompile Include="Kof_1_Player.cpp" />
-    <ClCompile Include="Kof_2_Player.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainGame.cpp" />
-    <ClCompile Include="ResultFont.cpp" />
-    <ClCompile Include="Select.cpp" />
-    <ClCompile Include="Sound.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Src\BackGround.cpp" />
+    <ClCompile Include="Src\Camera.cpp" />
+    <ClCompile Include="Src\GameNode.cpp" />
+    <ClCompile Include="Src\HealthBar.cpp" />
+    <ClCompile Include="Src\Image.cpp" />
+    <ClCompile Include="Src\KeyManager.cpp" />
+    <ClCompile Include="Src\Kof_1_Player.cpp" />
+    <ClCompile Include="Src\Kof_2_Player.cpp" />
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Src\MainGame.cpp" />
+    <ClCompile Include="Src\ResultFont.cpp" />
+    <ClCompile Include="Src\Select.cpp" />
+    <ClCompile Include="Src\Sound.cpp" />
+    <ClCompile Include="Src\Timer.cpp" />
+    <ClCompile Include="Src\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BackGround.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="GameNode.h" />
-    <ClInclude Include="HealthBar.h" />
-    <ClInclude Include="Image.h" />
-    <ClInclude Include="KeyManager.h" />
-    <ClInclude Include="Kof_1_Player.h" />
-    <ClInclude Include="Kof_2_Player.h" />
-    <ClInclude Include="macroFuntion.h" />
-    <ClInclude Include="MainGame.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="ResultFont.h" />
-    <ClInclude Include="Select.h" />
-    <ClInclude Include="SingletonBase.h" />
-    <ClInclude Include="Sound.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="Title.h" />
+    <ClInclude Include="Src\BackGround.h" />
+    <ClInclude Include="Src\Camera.h" />
+    <ClInclude Include="Src\GameNode.h" />
+    <ClInclude Include="Src\HealthBar.h" />
+    <ClInclude Include="Src\Image.h" />
+    <ClInclude Include="Src\KeyManager.h" />
+    <ClInclude Include="Src\Kof_1_Player.h" />
+    <ClInclude Include="Src\Kof_2_Player.h" />
+    <ClInclude Include="Src\macroFuntion.h" />
+    <ClInclude Include="Src\MainGame.h" />
+    <ClInclude Include="Src\pch.h" />
+    <ClInclude Include="Src\ResultFont.h" />
+    <ClInclude Include="Src\Select.h" />
+    <ClInclude Include="Src\SingletonBase.h" />
+    <ClInclude Include="Src\Sound.h" />
+    <ClInclude Include="Src\Timer.h" />
+    <ClInclude Include="Src\Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
