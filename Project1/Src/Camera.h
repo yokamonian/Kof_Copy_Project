@@ -4,6 +4,10 @@
 #include "pch.h"
 
 class Image;
+/// <summary>
+/// Camera : 벨트스크롤 타입의 액션 격투 게임의 카메라 워크를 담당하는 클래스.
+/// 1p위치 반경을 기반으로 화면보다 큰 배경을 위치값에 맞춰 잘라 재생한다.
+/// </summary>
 class Camera : public GameNode
 {
 private:

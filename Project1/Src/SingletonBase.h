@@ -2,6 +2,11 @@
 
 #pragma once
 
+/// <summary>
+/// SingletonBase : 프로젝트에서 사용되는 기본 매니저들을 관리하기 위해 만들어진 싱글톤 패턴 클래스.
+/// 싱글톤 패턴으로 생성이후 클래스 선언을 하지 않고도 어디에서도 접근할 수 있다.
+/// </summary>
+/// <typeparam name="T"></typeparam>
 template<typename T>
 class SingletonBase
 {
@@ -25,7 +30,7 @@ T* SingletonBase<T>::GetSingleton()
 {
 	if (!instance)
 	{
-		instance = new T;	// 0x000001
+		instance = new T;	
 	}
 
 	return instance;
@@ -36,7 +41,7 @@ void SingletonBase<T>::ReleaseSingleton()
 {
 	if (instance)
 	{
-		delete instance;		// 0x000001
-		instance = 0;			// 0x000000
+		delete instance;		
+		instance = 0;			
 	}
 }

@@ -1,6 +1,9 @@
 #pragma once
 #include "GameNode.h"
 class Image;
+/// <summary>
+/// ResultFont : 게임 결과 판정을 알려주는 글자를 표시한다.
+/// </summary>
 class ResultFont : public GameNode
 {
 private:

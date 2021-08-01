@@ -1,6 +1,9 @@
 #pragma once
 #include "pch.h"
 
+/// <summary>
+/// Image : 게임 내에 들어있는 모든 이미지 파일 정보를 관리하는 클래스.
+/// </summary>
 class Image
 {
 public:

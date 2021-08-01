@@ -6,7 +6,9 @@
 using namespace std;
 
 #define KEY_MAX_COUNT	256	
-
+/// <summary>
+/// Keymanager : 키입력을 확인하는 매니저 클래스.
+/// </summary>
 class KeyManager : public SingletonBase<KeyManager>
 {
 private:
